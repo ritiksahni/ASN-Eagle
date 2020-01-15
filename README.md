@@ -8,6 +8,8 @@ A tool to discover ASN of any host.
 3. Enter the following commands.
 ```bash
 git clone https://github.com/ritiksahni/ASN-Eagle.git
+cd ASN-Eagle
+pip3 install setuptools
 chmod +x setup.py
 chmod +x ASN-Eagle.py
 ./setup.py install
