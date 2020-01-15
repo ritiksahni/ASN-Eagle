@@ -16,6 +16,5 @@ setup(
 	author="Ritik Sahni",
 	author_email="ritiksahni0203@gmail.com",
 	license="GPL-3.0",
-	install_requires=["shodan", "sys", "socket", "terminal_banner"],
-	console=["ASN-Eagle.py"]
+	install_requires=["shodan", "terminal_banner"]
 )
