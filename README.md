@@ -24,3 +24,6 @@ Then, enter the hostname to search for its ASN (for e.g. google.com)
 
 ## Note:
 Don't delete config.py after the setup, if it gets deleted please run ./setup.py install
+
+## License
+[GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
