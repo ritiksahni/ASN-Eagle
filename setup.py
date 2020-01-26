@@ -10,7 +10,7 @@ fout.close
 
 setup(
 	name="ASN-Eagle",
-	version="1.0",
+	version="1.1",
 	description="Tool to search for Autonomous System Numbers.",
 	url="https://github.com/ritiksahni/ASN-Eagle",
 	author="Ritik Sahni",
