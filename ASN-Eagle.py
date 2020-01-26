@@ -4,9 +4,9 @@ import shodan
 import socket
 import sys
 import terminal_banner
+from termcolor import colored
 
 banner_text = ("""
-
  _______  _______  __    _         _______  _______  _______  ___      _______ 
 |   _   ||       ||  |  | |       |       ||   _   ||       ||   |    |       |
 |  |_|  ||  _____||   |_| | ____  |    ___||  |_|  ||    ___||   |    |    ___|
@@ -15,6 +15,7 @@ banner_text = ("""
 |   _   | _____| || | |   |       |   |___ |   _   ||   |_| ||       ||   |___ 
 |__| |__||_______||_|  |__|       |_______||__| |__||_______||_______||_______|
 
+Version 1.1
 
 Developer: Ritik Sahni
 Twitter: https://twitter.com/RitikSahni22
@@ -22,26 +23,24 @@ Instagram: https://www.instagram.com/deep.tech
 """)
 
 banner_terminal = terminal_banner.Banner(banner_text)
-print(banner_terminal)
+print (colored(banner_terminal, 'cyan'))
 
 try:
 	from config import shodan_api
 except ImportError:
-	print("Please run setup.py first.")
+	print (colored("Please run setup.py first.", 'red'))
 	sys.exit()
 
 
-hostname = input("Enter hostname: ")
-
+hostname = input (colored("Enter hostname: ", 'green'))
 
 try:
-	ip_addr = socket.gethostbyname(hostname)
+	ip_addr = (socket.gethostbyname(hostname))
 except Exception:
-	print("Please enter a valid input (e.g. google.com, facebook.com)")
+	print (colored("Please enter a valid input (e.g. google.com, facebook.com)", 'red'))
 	sys.exit()
 
-print ("IP Address: " + ip_addr)
-
+print (colored("IP Address: " + ip_addr, 'red'))
 configFile = open("config.py", "r")
 
 api = shodan.Shodan(str(shodan_api))
@@ -49,4 +48,4 @@ api = shodan.Shodan(str(shodan_api))
 shodanHost = (ip_addr)
 
 info = api.host(shodanHost)
-print("ASN found!!!\n\n" + (info['asn']))
+print (colored("ASN found!!!\n\n" + (info['asn']), 'magenta'))
