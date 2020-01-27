@@ -1,6 +1,8 @@
 # ASN-Eagle
 A tool to discover ASN of any host and fetch IP ranges.
 
+![ASN-Eagle Demo](demo.gif)
+
 ## Installation
 
 ```bash
