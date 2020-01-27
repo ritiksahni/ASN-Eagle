@@ -1,31 +1,23 @@
 # ASN-Eagle
-A tool to discover ASN of any host.
+A tool to discover ASN of any host and fetch IP ranges.
 
 ## Installation
 
-1. Create an account on [Shodan](https://www.shodan.io/) and login.
-2. After logging in, copy your shodan API key from [here](https://account.shodan.io/).
-3. Enter the following commands.
 ```bash
 git clone https://github.com/ritiksahni/ASN-Eagle.git
 cd ASN-Eagle
-pip3 install setuptools
-chmod +x setup.py
-chmod +x ASN-Eagle.py
-./setup.py install
+pip3 install -r requirements.txt
+python3 ASN-Eagle.py
 ```
-4. Enter your Shodan API key.
-5. Now, you're good to run ASN-Eagle :)
 
 
 ## Usage
-```bash
-./ASN-Eagle.py
+```
+python3 ASN-Eagle.py
 ```
 Then, enter the hostname to search for its ASN (for e.g. google.com)
 
-## Note:
-Don't delete config.py after the setup, if it gets deleted please run ./setup.py install
+## Best of luck for recon!!
 
 ## License
 [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)

@@ -1,0 +1,4 @@
+requests
+sockets
+terminal_banner
+termcolor
