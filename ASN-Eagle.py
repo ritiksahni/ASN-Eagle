@@ -40,7 +40,6 @@ arg_parse.add_argument('-o','--output-file')
 args = arg_parse.parse_args()
 
 # Fetch IP address of website using socket and save it to a variable
-#hostname = input(colored("Enter hostname [e.g google.com, tesla.com]: ", 'green'))
 hostname = args.domain
 ip_addr = socket.gethostbyname(hostname)
 
@@ -56,13 +55,11 @@ print(colored("[+] ASN Details found!!\n", 'magenta')) # Print ASN details
 print(colored(discovered_asn , 'yellow')) 
 access_rights = (0o755) # Defining access rights for creating output directory.
 
-#prompt1 = input(colored("\nDo you want to scan for IP ranges from discovered ASN? (Y or N)\n", 'green')) # Prompt for IP ranges
-
 path = ("./output")
 
 if(args.ip_ranges == 1):
 
-	#fetch the AS Number from the previos output
+	#fetch the AS Number from the previous output
 	new_asn = discovered_asn.split(' ')[0]
 	
 	print(colored("Fetching IP ranges belonging to the AS..\n", 'white')) 
@@ -90,9 +87,9 @@ if(args.output_file != None):
 
 	try:
 		if(args.ip_ranges == 1):
-			file.write(result.text+'\n')
+			file.write(result.text+'\n')		#write the result with ip ranges in the file
 		else:
-			file.write(discovered_asn+'\n')
+			file.write(discovered_asn+'\n')		#write the result without ip ranges in the file
 		print (colored("\nResults saved in output/"+filename+'\n', 'blue'))
 		
 	except Exception:
