@@ -19,7 +19,7 @@ banner_text = ("""
 |   _   | _____| || | |   |       |   |___ |   _   ||   |_| ||       ||   |___ 
 |__| |__||_______||_|  |__|       |_______||__| |__||_______||_______||_______|
 
-Version 2.0
+Version 2.1
 
 Developer: Ritik Sahni
 Twitter: https://twitter.com/RitikSahni22
