@@ -1,6 +1,8 @@
 # ASN-Eagle
 A tool to discover ASN of any host and fetch IP ranges.
 
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+
 ![ASN-Eagle Demo](demo.gif)
 
 ## Installation
