@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
 
 import requests
 import socket
@@ -11,14 +12,15 @@ import argparse
 os.system('clear')
 
 banner_text = ("""
- _______  _______  __    _         _______  _______  _______  ___      _______ 
-|   _   ||       ||  |  | |       |       ||   _   ||       ||   |    |       |
-|  |_|  ||  _____||   |_| | ____  |    ___||  |_|  ||    ___||   |    |    ___|
-|       || |_____ |       ||____| |   |___ |       ||   | __ |   |    |   |___ 
-|       ||_____  ||  _    |       |    ___||       ||   ||  ||   |___ |    ___|
-|   _   | _____| || | |   |       |   |___ |   _   ||   |_| ||       ||   |___ 
-|__| |__||_______||_|  |__|       |_______||__| |__||_______||_______||_______|
 
+
+ █████╗ ███████╗███╗   ██╗      ███████╗ █████╗  ██████╗ ██╗     ███████╗
+██╔══██╗██╔════╝████╗  ██║      ██╔════╝██╔══██╗██╔════╝ ██║     ██╔════╝
+███████║███████╗██╔██╗ ██║█████╗█████╗  ███████║██║  ███╗██║     █████╗  
+██╔══██║╚════██║██║╚██╗██║╚════╝██╔══╝  ██╔══██║██║   ██║██║     ██╔══╝  
+██║  ██║███████║██║ ╚████║      ███████╗██║  ██║╚██████╔╝███████╗███████╗
+╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝      ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝
+                                                                         
 Version 2.1
 
 Developer: Ritik Sahni
@@ -31,16 +33,16 @@ Instagram: https://www.instagram.com/deep.tech
 banner_terminal = terminal_banner.Banner(banner_text)
 print (colored(banner_terminal, 'cyan'))
 
-help = 'python3 ASN-Eagle.py -d domain [OPTIONS]\nOPTIONS:\n\n-i\t--ip-range\tDiscover Netblocks/IP ranges\n-o\t--output-file\tWrite output to a file\n'
+help = (colored('python3 ASN-Eagle.py -d domain [OPTIONS]\nOPTIONS:\n\n-i\t--ip-range\tDiscover Netblocks/IP ranges\n-o\t--output-file\tWrite output to a file\n', 'green'))
 
 arg_parse = argparse.ArgumentParser(usage=help)
 arg_parse.add_argument('-d','--domain',required=True)
-arg_parse.add_argument('-i','--ip-ranges', default=False, action='store_const',const = 1)
+arg_parse.add_argument('-i','--ip-ranges', default=False, action='store_const', const = 1)
 arg_parse.add_argument('-o','--output-file')
 args = arg_parse.parse_args()
 
 # Fetch IP address of website using socket and save it to a variable
-hostname = args.domain
+hostname = (args.domain)
 ip_addr = socket.gethostbyname(hostname)
 
 print(colored("Fetching AS Number..\n", 'white')) 
@@ -49,7 +51,7 @@ print(colored("Fetching AS Number..\n", 'white'))
 asn_fetch = requests.get('https://ipinfo.io/'+ip_addr+'/org?token=c8bb8b5ed87127')
 
 #fetch the desired result and store it
-discovered_asn = asn_fetch.text
+discovered_asn = (asn_fetch.text)
 
 print(colored("[+] ASN Details found!!\n", 'magenta')) # Print ASN details
 print(colored(discovered_asn , 'yellow')) 
