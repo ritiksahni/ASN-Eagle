@@ -11,16 +11,13 @@ A tool to discover ASN of any host and fetch IP ranges.
 git clone https://github.com/ritiksahni/ASN-Eagle.git
 cd ASN-Eagle
 pip3 install -r requirements.txt
-python3 ASN-Eagle.py
 ```
 
 
 ## Usage
 ```
-python3 ASN-Eagle.py
+python3 ASN-Eagle.py -d target.com -i -o output_filename.txt
 ```
-Then, enter the hostname to search for its ASN (for e.g. google.com)
-
 ## Best of luck for recon!!
 
 ## License
