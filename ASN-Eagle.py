@@ -46,7 +46,7 @@ hostname = (args.domain)
 try:
         ip_addr = socket.gethostbyname(hostname)
 except:
-        print('[!] No such host found!!')
+        print(colored('[!] No such host found!!', 'red'))
         sys.exit()
 
 print(colored("Fetching AS Number..\n", 'white')) 
