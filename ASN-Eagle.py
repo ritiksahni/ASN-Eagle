@@ -43,7 +43,11 @@ args = arg_parse.parse_args()
 
 # Fetch IP address of website using socket and save it to a variable
 hostname = (args.domain)
-ip_addr = socket.gethostbyname(hostname)
+try:
+        ip_addr = socket.gethostbyname(hostname)
+except:
+        print('[!] No such host found!!')
+        sys.exit()
 
 print(colored("Fetching AS Number..\n", 'white')) 
 
